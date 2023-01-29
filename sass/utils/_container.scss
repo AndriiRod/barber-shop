@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  padding-left: 31px;
+  padding-right: 31px;
+  width: 100%;
+  @include smart {
+    width: 480px;
+  }
+  @include tab {
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+  @include desktop {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
