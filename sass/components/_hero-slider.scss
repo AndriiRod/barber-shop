@@ -16,21 +16,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     &--first {
-      background-image: url(../images/smart/smart_bghero_1@1x-min.jpg);
+      @include gradient(url(../images/smart/smart_bghero_1@1x-min.jpg));
+
       @include retina {
-        background-image: url(../images/smart/smart_bghero_1@2x-min.jpg);
+        @include gradient(url(../images/smart/smart_bghero_1@2x-min.jpg));
       }
     }
     &--second {
-      background-image: url(../images/smart/smart_bghero_2@1x-min.jpg);
+      @include gradient(url(../images/smart/smart_bghero_2@1x-min.jpg));
+
       @include retina {
-        background-image: url(../images/smart/smart_bghero_2@2x-min.jpg);
+        @include gradient(url(../images/smart/smart_bghero_2@2x-min.jpg));
       }
     }
     &--third {
-      background-image: url(../images/smart/smart_bghero_3@1x-min.jpg);
+      @include gradient(url(../images/smart/smart_bghero_3@1x-min.jpg));
+
       @include retina {
-        background-image: url(../images/smart/smart_bghero_3@2x-min.jpg);
+        @include gradient(url(../images/smart/smart_bghero_3@2x-min.jpg));
       }
     }
   }

@@ -3,7 +3,28 @@
 
   padding-top: 208px;
   padding-bottom: 208px;
+  &__caption {
+    margin-bottom: 20px;
 
+    color: $caption-text-color;
+  }
+  &__title {
+    margin-bottom: 20px;
+
+    font-family: 'Raleway';
+    font-size: 48px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+
+    color: $title-color;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.02em;
+
+    color: #9da4bd;
+  }
   &__social {
     @media screen and (max-width: 767px) {
       display: none;
