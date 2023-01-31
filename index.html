@@ -46,7 +46,12 @@
             <use href="./images/icons.svg#icon-logo"></use></svg
         ></a>
 
-        <button class="header__menu-btn" type="button">
+        <button
+          class="header__menu-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg class="header__menu-icon" width="40" height="40">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
@@ -94,6 +99,33 @@
           </div>
         </div>
       </section>
+      <div class="smart-menu js-menu-container" id="mobile-menu">
+        <button class="smart-menu__close js-close-menu" type="button">
+          <svg class="smart-menu__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+
+        <ul class="smart-menu__nav">
+          <li class="smart-menu__item"><a href="" class="smart-menu__link">About</a></li>
+          <li class="smart-menu__item">
+            <a href="" class="smart-menu__link">Services and prices</a>
+          </li>
+          <li class="smart-menu__item"><a href="" class="smart-menu__link">Barbers</a></li>
+          <li class="smart-menu__item"><a href="" class="smart-menu__link">Contacts</a></li>
+        </ul>
+
+        <a class="smart-menu__tel" href="tel:+380441111111">+38 044 111 11 11</a>
+
+        <button class="smart-menu__btn btn" type="button">online-booking</button>
+
+        <ul class="smart-menu__list">
+          <li class="smart-menu__element">
+            <a href="" class="smart-menu__social">Instagram</a>
+          </li>
+          <li class="smart-menu__element"><a href="" class="smart-menu__social">Youtube</a></li>
+        </ul>
+      </div>
     </main>
     <!-- !Slick slider -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -105,5 +137,15 @@
     ></script>
     <!-- !Slick slider -->
     <script src="./js/hero-slider.js" type="module"></script>
+
+    <!-- !lock Scroll smart menu -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/smart-menu.js" type="module"></script>
   </body>
 </html>
