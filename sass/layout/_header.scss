@@ -1,2 +1,38 @@
-h1 {
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  padding-top: 40px;
+
+  z-index: 1;
+  &__logo-icon {
+    fill: #ffffff;
+  }
+  &__menu-icon {
+    fill: #ffffff;
+  }
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+  &__menu-btn {
+    margin-left: auto;
+  }
+  &__nav {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__tel {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__button {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
 }

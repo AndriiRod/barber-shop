@@ -1,0 +1,12 @@
+.hero {
+  position: relative;
+
+  padding-top: 208px;
+  padding-bottom: 208px;
+
+  &__social {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}
