@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- !shadow   -->
+    <link rel="stylesheet" href="./sass/vendor/box-shadows.min.css" />
 
     <!-- !slick slider -->
     <!-- Add the slick-theme.css if you want default styling -->
@@ -51,6 +53,7 @@
           type="button"
           aria-expanded="false"
           aria-controls="mobile-menu"
+          data-open
         >
           <svg class="header__menu-icon" width="40" height="40">
             <use href="./images/icons.svg#icon-menu"></use>
@@ -100,7 +103,7 @@
         </div>
       </section>
       <div class="smart-menu js-menu-container" id="mobile-menu">
-        <button class="smart-menu__close js-close-menu" type="button">
+        <button class="smart-menu__close js-close-menu" type="button" data-close>
           <svg class="smart-menu__icon" width="40" height="40">
             <use href="./images/icons.svg#icon-cross"></use>
           </svg>
@@ -117,7 +120,9 @@
 
         <a class="smart-menu__tel" href="tel:+380441111111">+38 044 111 11 11</a>
 
-        <button class="smart-menu__btn btn" type="button">online-booking</button>
+        <button class="smart-menu__btn btn bShadow bShadow-60h" type="button">
+          online-booking
+        </button>
 
         <ul class="smart-menu__list">
           <li class="smart-menu__element">
@@ -126,6 +131,7 @@
           <li class="smart-menu__element"><a href="" class="smart-menu__social">Youtube</a></li>
         </ul>
       </div>
+      <div data-overlay class="overlay is-hidden"></div>
     </main>
     <!-- !Slick slider -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -145,6 +151,8 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
+
+    <script src="./js/overlay.js" type="module"></script>
 
     <script src="./js/smart-menu.js" type="module"></script>
   </body>
