@@ -7,30 +7,94 @@
   padding-top: 40px;
 
   z-index: 1;
+  @include tab {
+    padding-top: 32px;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__logo-icon {
     fill: #ffffff;
+    @include tab {
+      fill: #303030;
+    }
+  }
+  &__menu-btn {
+    margin-left: auto;
+    @include tab {
+      display: none;
+    }
   }
   &__menu-icon {
     fill: #ffffff;
   }
-  &__wrap {
-    display: flex;
-    align-items: center;
-  }
-  &__menu-btn {
-    margin-left: auto;
-  }
+
   &__nav {
-    @media screen and (max-width: 767px) {
-      display: none;
+    display: none;
+    @include tab {
+      display: flex;
+      gap: 16px;
+
+      margin-left: 60px;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+
+    color: $fourth-text-color;
+
+    transition: color $animation-speed-hover $animation-cubic-bezier;
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
   }
   &__tel {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: $fourth-text-color;
+
+    transition: color $animation-speed-hover $animation-cubic-bezier;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+    @media screen and (max-width: 1199px) {
+      position: absolute;
+      right: 52px;
+      bottom: -24px;
+    }
     @media screen and (max-width: 767px) {
       display: none;
     }
   }
   &__button {
+    margin-left: 37px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+
+    color: $fourth-text-color;
+
+    transition: background-color $animation-speed-hover $animation-cubic-bezier;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
     @media screen and (max-width: 767px) {
       display: none;
     }
