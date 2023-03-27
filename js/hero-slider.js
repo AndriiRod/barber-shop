@@ -4,7 +4,16 @@ $('.hero__slider').slick({
   speed: 1000,
   fade: true,
   cssEase: 'linear',
-  arrows: false,
+  arrows: true,
   autoplay: true,
-  dots: false,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        dots: false,
+      },
+    },
+  ],
 });

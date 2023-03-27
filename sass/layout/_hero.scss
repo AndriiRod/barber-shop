@@ -53,10 +53,14 @@
     padding-top: 208px;
     padding-bottom: 209px;
     @include tab {
+      position: relative;
+
       padding-top: 272px;
-      padding-right: 92px;
+      padding-right: 90px;
       padding-bottom: 237px;
       padding-left: 120px;
+
+      z-index: 0;
     }
   }
   &__caption {

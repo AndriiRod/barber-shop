@@ -3,13 +3,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 580px;
     z-index: -1;
+    @include smart {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 480px;
+    }
     @include tab {
-      width: 570px;
+      width: 100%;
       height: 680px;
-      left: 159px;
     }
   }
 
@@ -65,5 +71,47 @@
         }
       }
     }
+  }
+}
+
+.slick-dots {
+  top: 50%;
+  right: 20px;
+  bottom: unset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  transform: translateY(-50%);
+
+  width: 18px;
+
+  z-index: 1;
+
+  li {
+    width: unset;
+    height: unset;
+    margin: 0;
+  }
+
+  li button {
+    width: 8px;
+    height: 2px;
+  }
+
+  li button::before {
+    content: '';
+    width: 8px;
+    height: 2px;
+    background-color: #9da4bd;
+    opacity: 1;
+  }
+  li.slick-active button::before {
+    content: '';
+    width: 18px;
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 1;
   }
 }
